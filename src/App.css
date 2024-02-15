@@ -1,0 +1,107 @@
+body {
+  background: white;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  position: relative;
+}
+
+* {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+}
+
+.inputarea-container::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: purple;
+  filter: blur(50px);
+  z-index: -99999;
+}
+
+.inputarea-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.textarea {
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.387), -3px -3px 10px rgba(0, 0, 0, 0.387);
+}
+
+.addbtn {
+  width: 20%;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid purple;
+  background-image: -webkit-linear-gradient(45deg, purple, rgb(192, 225, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
+
+
+.task {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: purple;
+  box-shadow: 3px 3px 10px rgba(225, 0, 255, 0.387), -3px -3px 10px rgba(0, 191, 255, 0.387);
+  margin: 3% 0%;
+  font-weight: bolder;
+  color: white
+}
+
+.list {
+  list-style-type: none;
+  padding: 0% 3%;
+  width: 100%;
+}
+
+.deletebtn {
+  padding: 0% 3%;
+  height: 3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+h1 {
+  background-image: -webkit-linear-gradient(45deg, purple, rgb(192, 243, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+  padding: 3%;
+  width: 50%;
+  border-radius: 10px;
+  margin: 5% auto;
+}
+
+@media(width<700px) {
+  .inputarea-container::before {
+    display: none;
+  }
+}
